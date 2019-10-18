@@ -1,0 +1,106 @@
+body{
+  background: url(/img/bg.png);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  /*grid-template-areas: 
+  "header"
+  "section"
+  "content"; */
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: white;
+  height: 60px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-self: right;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  padding: 10px;
+  margin: 10px;
+}
+header nav ul li a{
+  text-decoration: none;
+}
+header nav img{
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+header nav h1 {
+  justify-self: center;
+  margin: 15px;
+  /*position: relative;
+  top: 10px;*/
+}
+main{
+  width: 80%;
+  margin: 73px auto;
+}
+section{
+  display: grid;
+  grid-template-columns: auto auto;
+  background: #ded3d36b;
+  padding: 10px;
+  border: 1px dashed;
+}
+section img{
+  justify-self: center;
+}
+.content  {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+}
+.content article{
+  margin: 5px;
+  border: 2px solid #a8a8e4;
+  padding: 10px;
+}
+.content article h3{
+  margin: 0;
+}
+
+header{
+  grid-area: "header";
+}
+
+section{
+  grid-area: "section";
+}
+
+.content {
+  grid-area: "content";
+}
+@media only screen and (max-width: 500px) {
+  body {
+    grid-template-areas: 
+    "header"
+    "section"
+    "content";
+}
+section, .content {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+.content{
+  text-align:center;
+}
+}
+
+
+/* MASIH BANYAK ERROR, UNTUK RESPONSILBILITAS WEBSITE BELUM DI ATUR */
