@@ -74,6 +74,16 @@ section img{
 .content article h3{
   margin: 0;
 }
+footer{
+  width: 100%;
+  background: #333;
+}
+
+footer h2 {
+  color: aliceblue;
+  text-align: center;
+  margin: 0;
+}
 
 header{
   grid-area: "header";
