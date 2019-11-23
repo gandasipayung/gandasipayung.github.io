@@ -75,7 +75,7 @@ function draw(){
         // Game over 
         
         if( gX + itsMe.width >= pipe[i].x && gX <= pipe[i].x + atas.width && (gY <= pipe[i].y + atas.height || gY+itsMe.height >= pipe[i].y+constant) || gY + itsMe.height >=  cvs.height - dasar.height){
-            var r = confirm("To Play Again Click Ok then Cancel");
+            var r = confirm('Skor Kamu : '+ score + '\n' + "To Play Again Click Ok then Cancel");
             if (r == true){
               window.location.reload();
             }
