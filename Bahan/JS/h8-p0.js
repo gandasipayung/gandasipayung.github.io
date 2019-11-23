@@ -1,72 +1,61 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-// load images
-
 var itsMe = new Image();
 var bg = new Image();
 var dasar = new Image();
 var atas = new Image();
 var bawah = new Image();
+var sndtr = new Audio();
+var hap = new Audio();
 
 itsMe.src = "/Bahan/image/asd.png";
 bg.src = "/Bahan/image/bg1.jpg";
 dasar.src = "/Bahan/image/gr.png";
 atas.src = "/Bahan/image/atas.png";
 bawah.src = "/Bahan/image/bawah.png";
-
-
-// some variables
+sndtr.src = "/Bahan/sound/soundtrack.ogg"
+hap.src = "/Bahan/sound/hap.mp3"
 
 var gap = 85;
 var constant;
-
 var gX = 10;
 var gY = 30;
-
 var gravity = 0.85;
-
 var score = 0;
 
-// audio files
-
-
-
-// on key down
 
 document.addEventListener("keydown",moveUp);
 
+
 function moveUp(){
     gY -= 20;
-    // fly.play();
 }
 
-// pipe coordinates
+var obs = [];
 
-var pipe = [];
-
-pipe[0] = {
+obs[0] = {
     x : cvs.width,
     y : -150
 };
 
-// draw images
-
-function draw(){
+function play(){
+    sndtr.play()
     
     ctx.drawImage(bg,0,0);
     
-    
-    for(var i = 0; i < pipe.length; i++){
+
+
+    for(var i = 0; i < obs.length; i++){
         
         constant = atas.height+gap;
-        ctx.drawImage(atas,pipe[i].x,pipe[i].y);
-        ctx.drawImage(bawah,pipe[i].x,pipe[i].y+constant);
+        ctx.drawImage(atas,obs[i].x,obs[i].y);
+        ctx.drawImage(bawah,obs[i].x,obs[i].y+constant);
              
-        pipe[i].x--;
+        obs[i].x--;
         
-        if( pipe[i].x == cvs.width/1.5){
-            pipe.push({
+        if( obs[i].x == cvs.width/1.5){
+            obs.push({
                 x : cvs.width,
                 y : Math.floor(Math.random()*(atas.height/2))-atas.height
             }); 
@@ -74,17 +63,19 @@ function draw(){
 
         // Game over 
         
-        if( gX + itsMe.width >= pipe[i].x && gX <= pipe[i].x + atas.width && (gY <= pipe[i].y + atas.height || gY+itsMe.height >= pipe[i].y+constant) || gY + itsMe.height >=  cvs.height - dasar.height){
-            var r = confirm('Skor Kamu : '+ score + '\n' + "To Play Again Click Ok then Cancel");
-            if (r == true){
+        if( gX + itsMe.width >= obs[i].x && gX <= obs[i].x + atas.width && (gY <= obs[i].y + atas.height || gY+itsMe.height >= obs[i].y+constant) || gY + itsMe.height >=  cvs.height - dasar.height){
+            var gameOver = confirm('Skor Kamu : '+ score + '\n' + "To Play Again Click Ok then Cancel");
+            if (gameOver == true){
               window.location.reload();
+            } else {
+                
             }
         }
         
-        if(pipe[i].x == 5){
+        if(obs[i].x == 5){
+            hap.play();
             score++;
         }
-        
         
     }
 
@@ -98,8 +89,8 @@ function draw(){
     ctx.font = "20px Verdana";
     ctx.fillText("Score : "+score,10,cvs.height-20);
     
-    requestAnimationFrame(draw);
+    requestAnimationFrame(play);
     
 }
 
-draw();
+play();
