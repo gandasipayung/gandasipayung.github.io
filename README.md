@@ -44,5 +44,11 @@ Terimakasih
 
 Ganda Sipayung
 ------------------------------------------------------------------------------------------------------------------------------
-Rencana Next Update : 
--BG Sound
+Update : 23 Nov 2019
+Menambah sound untuk game di page project dan menambah html tambahan
+Menambah how to play
+Menambah masalah untuk diselesaikan nanti
+
+Terimakasih
+
+Ganda Sipayung
