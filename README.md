@@ -22,3 +22,27 @@ ditambah 2 halaman html agar page lebih interaktif dan penambahan link media sos
 di page project masih bingung mau buat apa, jadi saya embed situs lain hehehe
 
 wait for next update thx
+------------------------------------------------------------------------------------------------------------------------------
+Update : 23 Nov 2019
+
+Diupdate ini saya menambahkan Final Project Phase 0 di halaman project.
+Di halaman project ada sebuah permainan yang saya buat dari berbagai dokumentasi online, dan hanya menggunakan DOM javascript.
+Keterangan :
+Player : Foto saya sendiri
+Obstacle/Rintangan :
+  Atas : Exercise/Tugas Anchor
+  Bawah : Live Code
+Game Over : Jika player mengenai obstacle/rintangan atau terjatuh ke pembatas bawah
+Gampe play : tekan tombok apa saja di keyboard untuk membuat player tetap berada di jalur yang di inginkan.
+
+Filosofi dari game ini :
+Game ini merupakan kostumisasi sederhana dari game flappy bird yang dulu pernah booming.
+Saya membuat game ini karena menurut saya belajar di Hacktiv8 itu berat dan susah. Apalagi saya tidak memiliki basic IT sebelum masuk Hacktiv8. Namun berkat motivasi/dukungan/dan perjuangan sesama student semua masih bisa di nikmati.
+Untuk penjelasan lebih lanjut tentang filosofi kenapa saya memilih membuat project ini, enaknya sih sambil ngopi. hehehe.
+
+Terimakasih
+
+Ganda Sipayung
+------------------------------------------------------------------------------------------------------------------------------
+Rencana Next Update : 
+-BG Sound
